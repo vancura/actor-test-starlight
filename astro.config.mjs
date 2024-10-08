@@ -4,25 +4,33 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			social: {
-				github: 'https://github.com/withastro/starlight',
-			},
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
-		}),
-	],
+    integrations: [
+        starlight({
+            title: 'Actor',
+            social: {
+                github: 'https://github.com/apify/actor-whitepaper',
+            },
+            sidebar: [
+                {
+                    label: 'Introduction',
+                    items: [
+                        {label: 'Introduction', slug: 'introduction/introduction'},
+                        {label: 'Background', slug: 'introduction/background'},
+                        {label: 'Overview', slug: 'introduction/overview'},
+                        {label: 'Apify platform', slug: 'introduction/apify-platform'},
+                    ],
+                },
+                {
+                    label: 'Basic concepts',
+                    items: [
+                        {label: 'Basic concepts', slug: 'basic-concepts/basic-concepts'},
+                        {label: 'Input', slug: 'basic-concepts/input'},
+                        {label: 'Run environment', slug: 'basic-concepts/run-environment'},
+                        {label: 'Output', slug: 'basic-concepts/output'},
+                        {label: 'Storage', slug: 'basic-concepts/storage'},
+                    ],
+                },
+            ],
+        }),
+    ],
 });
